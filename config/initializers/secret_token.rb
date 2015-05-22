@@ -24,4 +24,4 @@ def secure_token
   end
 end
 
-RailsTry::Application.config.secret_key_base = secure_token
+RailsTry::Application.config.secret_key_base = secure_tokenaaa
