@@ -6,6 +6,8 @@ ruby '2.1.3'
 gem 'rails', '4.2.1'
 gem 'bootstrap-sass','2.3.2.0'
 gem 'sprockets'
+gem 'bcrypt-ruby', '3.1.2'
+
 group :development, :test do
   gem 'sqlite3', '1.3.8'
 end
