@@ -7,6 +7,14 @@ class User < ActiveRecord::Base
                                    dependent:   :destroy
   has_many :followers, through: :reverse_relationships, source: :follower
 
+####お気に入り
+  has_many :favorites, foreign_key: "favoller_id", dependent: :destroy
+  has_many :faved_micropost, through: :favorites, source: :faved
+    
+  has_many :reverse_favorites, foreign_key: "faved_id", class_name: "Favorites",dependent: :destroy
+  has_many :favoller_id, through: :reverse_favorites, source: :favoller
+  ##
+
   before_save { self.email = email.downcase }
   before_create :create_remember_token
   validates :name, presence: true, length: { maximum: 50 }

@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150601080824) do
+ActiveRecord::Schema.define(version: 20150608102044) do
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer  "favoller_id"
+    t.integer  "faved_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "microposts", force: :cascade do |t|
     t.string   "content"
