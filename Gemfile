@@ -35,7 +35,6 @@ gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails', '3.0.4'
 gem 'turbolinks', '2.5.3'
 gem 'jbuilder', '1.0.2'
-gem 'multi_json', '1.11.1'
 
 
 group :doc do
