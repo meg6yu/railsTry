@@ -12,6 +12,23 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
+    changeback(0);
+});
+
+function changeback(index){
+	var backurl = ["url(<%= asset_path('bg2.jpg') %>)", "url(<%= asset_path('bg3.jpg') %>)", "url(<%= asset_path('bg1.jpg') %>)"];
+	if(index >= backurl.length){ index = 0; }
+	console.log("ok");
+	$("body").css("background-image",　backurl[index]);
+	// setTimeout(function(){
+	// 	$("body").css("background-image",　backurl[index]).animate({backgroundColor: 'rgba(0,0,0,0.4)'},400);
+	// },1800);
+	
+	index++;
+	setTimeout("changeback('" + index +"')",2000);
+}

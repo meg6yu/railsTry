@@ -1,8 +1,14 @@
-@import "bootstrap";
+// @import "bootstrap";
 
 /* mixins, variables, etc. */
-
-$grayMediumLight: #eaeaea;
+$grayMediumLight:       #eaeaea ;
+$grayLight:             #eaeaea ;
+$grayLighter:           #eaeaea ;
+$gray:                  #888888 ;
+$grayDarker:            #444444 ;
+$yellow:                #dede9e ;
+$blue:                  #428bca ;
+$brand-warning:         #f04d4e ;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -18,7 +24,11 @@ html {
 
 body {
   padding-top: 60px;
+  background-image: url("bg1.jpg");
+  background-size: cover;
+  background-attachment: fixed;  
 }
+
 
 section {
   overflow: auto;
@@ -55,6 +65,10 @@ h2 {
   text-align: center;
   font-weight: normal;
   color: $grayLight;
+}
+
+h3{
+  margin-top: 0;
 }
 
 p {
@@ -204,10 +218,14 @@ input {
   }
 }
 
-.field_with_errors {
-  @extend .control-group;
-  @extend .error;
+
+/* span8 背景 */
+.for_bg{
+  background-color: rgba(160,220,230,0.8);
+  padding: 15px;
+  border: 0;
 }
+
 
 
 /* users index */
@@ -230,11 +248,24 @@ input {
 
 .microposts {
   list-style: none;
-  margin: 10px 0 0 0;
+  // margin: 10px 0 0 0;
+  padding: 0;
 
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
+    clear: both;
+    display: block;
+    > a{
+      display: block;
+      float:left;
+      padding-right: 15px;
+    }
+  }
+
+  .feed_content{
+    display: block;
+    max-width: 100%;
   }
 }
 .content {
@@ -242,6 +273,7 @@ input {
 }
 .timestamp {
   color: $grayLight;
+  float: right;
 }
 .gravatar {
   float: left;
