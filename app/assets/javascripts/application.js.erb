@@ -23,8 +23,8 @@ $(document).ready(function(){
 function changeback(index){
 	var speed = 3000; //fadein,fadeoutの時間
 	var times = 5000; //画像切り替えの間隔
-	var backurl = ["url('app/assets/images/bg1.jpg')", "url('app/assets/images/bg2.jpg')", "url('app/assets/images/bg3.jpg')"
-	,"url(<%= asset_path('bg4.jpg') %>)","url(<%= asset_path('bg5.jpg') %>)","url(<%= asset_path('bg6.jpg') %>)"];
+	var backurl = ["url(image_path('bg1.jpg'))", "url(image_path('bg2.jpg'))", "url(image_path('bg3.jpg'))",
+	,"url(image_path('bg4.jpg'))", "url(image_path('bg5.jpg'))", "url(image_path('bg6.jpg'))"];
 	if(index >= backurl.length){ index = 0; }
 	console.log("ok");
 
