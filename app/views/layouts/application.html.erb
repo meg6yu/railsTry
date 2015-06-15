@@ -9,17 +9,15 @@
     <%= render 'layouts/shim' %>
   </head>
   <body>
-    <div class="backone">
-      <div class="backtwo">
-        <%= render 'layouts/header' %>
-        <div class="container">
-          <% flash.each do |key, value| %>
-          <%= content_tag(:div, value, class: "alert alert-#{key}") %>
-          <% end %>
-          <%= yield %>
-          <%= render 'layouts/footer' %>
-        </div>
+    <div class="backone"></div>
+      <%= render 'layouts/header' %>
+      <div class="container">
+        <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+        <% end %>
+        <%= yield %>
+        <%= render 'layouts/footer' %>
       </div>
-    </div>
+ 
   </body>
 </html>
