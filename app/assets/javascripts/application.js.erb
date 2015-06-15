@@ -16,6 +16,7 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
 $(document).ready(function(){
     changeback(0);
 });
@@ -29,44 +30,7 @@ function changeback(index){
 	console.log("ok");
 
 	$("body").css("background-image",　backurl[index]);
-	
-	// $(function(){
-	// 	setInterval(function(){
-	// 		$("body").fadeOut(speed,function()){
-	// 			index = index === backurl.length - 1 ? 0 : index + 1;
-	// 			$(this).css("background-image", backurl[index].fadeIn(speed));
-	// 		});
-	// 		}, times);
-	// 	});
-	
-	// setTimeout(function(){
-	// 	$("body").css("background-image",　backurl[index]).animate({backgroundColor: 'rgba(0,0,0,0.4)'},400);
-	// },1800);
-	
-	
+
 	setTimeout("changeback('" + index +"')",2000);
 	index++;
 }
-
-
-	// var speed = 3000; // フェードイン・フェードアウトの処理時間（1000で1秒）
-	// var times = 5000; // 画像切り替えの間隔（1000で1秒）
-	// var bgimages = [
-	// 'aa.jpg',
-	// 'bb.jpg',
-	// 'cc.jpg' // 最後に,をつけない
-	// ];
-	// $(function(){
-	// // 現在の背景画像番号格納する変数
-	// var thisnum = 0;
-	// // 定期的に実行
-	// setInterval(function(){
-	// // 背景をフェードアウト
-	// $("#bgimg").fadeOut(speed,function(){
-	// // 背景画像番号変更
-	// thisnum = thisnum === bgimages.length - 1 ? 0 : thisnum + 1;
-	// // 背景画像を変更しフェードイン
-	// $(this).css("background-image","url("+bgimages[thisnum]+")").fadeIn(speed);
-	// });
-	// }, times);
-	// });
