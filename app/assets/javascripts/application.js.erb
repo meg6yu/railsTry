@@ -23,7 +23,7 @@ $(document).ready(function(){
 function changeback(index){
 	var speed = 3000; //fadein,fadeoutの時間
 	var times = 5000; //画像切り替えの間隔
-	var backurl = ["url('bg1.jpg')", "url('bg2.jpg')", "url('bg3.jpg')"
+	var backurl = ["url('assets/images/bg1.jpg')", "url('assets/images/bg2.jpg')", "url('assets/images/bg3.jpg')"
 	,"url(<%= asset_path('bg4.jpg') %>)","url(<%= asset_path('bg5.jpg') %>)","url(<%= asset_path('bg6.jpg') %>)"];
 	if(index >= backurl.length){ index = 0; }
 	console.log("ok");
