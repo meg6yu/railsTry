@@ -16,7 +16,7 @@ gem 'twitter-bootstrap-rails' # Bootstrapの本体
 
 
 group :development, :test do
-  gem 'sqlite3', '1.3.8'
+  gem 'sqlite3'
   gem 'web-console'
 end
 
