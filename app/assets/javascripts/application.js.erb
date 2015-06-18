@@ -21,42 +21,41 @@ $(document).ready(function(){
    changeback(0);
 });
 
-function changeback(index){
-    var speed = 3000; //fadein,fadeoutの時間
-    var times = 5000; //画像切り替えの間隔
-    var backurl = ["url(<%= asset_path('bg1.jpg') %>)", "url(<%= asset_path('bg2.jpg') %>)", "url(<%= asset_path('bg3.jpg') %>)"
-	,"url(<%= asset_path('bg4.jpg') %>)","url(<%= asset_path('bg5.jpg') %>)","url(<%= asset_path('bg6.jpg') %>)"];
-    if(index >= backurl.length){ index = 0; }
-    console.log("ok");
-
-    $(".backone").css("background-image",　backurl[index]);
-    index++;
-    setTimeout("changeback('" + index +"')",10000);
-    
-}
-
-//////あとで挑戦
-// function changeback(index){
-// 	var speed = 1000; // フェードイン・フェードアウトの処理時間（1000で1秒）
-// 	var times = 1000; // 画像切り替えの間隔（1000で1秒）
-// 	var bgimages = ["url(<%= asset_path('bg1.jpg') %>)", "url(<%= asset_path('bg2.jpg') %>)", "url(<%= asset_path('bg3.jpg') %>)"
-// 	,"url(<%= asset_path('bg4.jpg') %>)","url(<%= asset_path('bg5.jpg') %>)","url(<%= asset_path('bg6.jpg') %>)"];
-// 	$(function(){
+//////成功(修正したい)
+ function changeback(index){
+ 	var speed = 1000; // フェードイン・フェードアウトの処理時間（1000で1秒）
+ 	var times = 5000; // 画像切り替えの間隔（1000で1秒）
+ 	var backurl = ["url(<%= asset_path('bg1.jpg') %>)", "url(<%= asset_path('bg2.jpg') %>)", "url(<%= asset_path('bg3.jpg') %>)"
+ 	,"url(<%= asset_path('bg4.jpg') %>)","url(<%= asset_path('bg5.jpg') %>)","url(<%= asset_path('bg6.jpg') %>)"];
 // 	// 現在の背景画像番号格納する変数
-// 	var thisnum = 1;
-// 	// 定期的に実行
-// 	setInterval(function(){
-// 	// 背景をフェードアウト
-// 	$(".backone").fadeOut(speed,function(){
-// 		// 背景画像番号変更
-// 		thisnum = thisnum === bgimages.length - 1 ? 0 : thisnum + 1;
-// 		// 背景画像を変更しフェードイン
-// 		$(this).css("background-image",bgimages[thisnum]).fadeIn(speed);
-// 		});
-// 		}, times);
-// 	});
+ 	var index = 1;
+ 	// 定期的に実行
+ 	setInterval(function(){
+ 	// 背景をフェードアウト
+ 	$(".backone").fadeOut(speed, function(){
+ 		// 背景画像番号変更
+ 		index = index === backurl.length - 1 ? 0 : index + 1;
+ 		// 背景画像を変更しフェードイン
+ 		$(".backone").css("background-image",backurl[index]).fadeIn(speed);
+ 		});
+ 	}, times);
+ }
+
+
+
+////
+// function changeback(index){
+//     var speed = 3000; //fadein,fadeoutの時間
+//     var times = 5000; //画像切り替えの間隔
+//     var backurl = ["url(<%= asset_path('bg1.jpg') %>)", "url(<%= asset_path('bg2.jpg') %>)", "url(<%= asset_path('bg3.jpg') %>)"
+//     ,"url(<%= asset_path('bg4.jpg') %>)","url(<%= asset_path('bg5.jpg') %>)","url(<%= asset_path('bg6.jpg') %>)"];
+//     if(index >= backurl.length){ index = 0; }
+//     console.log("ok");
+
+//     $(".backone").css("background-image",　backurl[index]);
+//     index++;
+//     setTimeout("changeback('" + index +"')",10000);
+    
 // }
-
-
 
 

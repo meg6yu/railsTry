@@ -1,6 +1,6 @@
 <% if signed_in? %>
 <div class="row">
-  <aside class="col-xs-4">
+  <aside class="col-xs-4 fixedleft">
     <div class="thumbnail for_bg">
       <section>
         <%= render 'shared/user_info' %>
@@ -13,7 +13,7 @@
       </section>
     </div>
   </aside>
-  <div class="col-xs-8">
+  <div class="col-xs-8 fixedright">
     <div class="thumbnail for_bg">
       <h3>Micropost Feed</h3>
       <%= render 'shared/feed' %>
