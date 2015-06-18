@@ -23,15 +23,12 @@ $(document).ready(function(){
 
 //////成功(修正したい)
  function changeback(index){
- 	var speed = 1000; // フェードイン・フェードアウトの処理時間（1000で1秒）
- 	var times = 5000; // 画像切り替えの間隔（1000で1秒）
+ 	var speed = 1000;
+ 	var times = 10000;
  	var backurl = ["url(<%= asset_path('bg1.jpg') %>)", "url(<%= asset_path('bg2.jpg') %>)", "url(<%= asset_path('bg3.jpg') %>)"
  	,"url(<%= asset_path('bg4.jpg') %>)","url(<%= asset_path('bg5.jpg') %>)","url(<%= asset_path('bg6.jpg') %>)"];
-// 	// 現在の背景画像番号格納する変数
  	var index = 1;
- 	// 定期的に実行
  	setInterval(function(){
- 	// 背景をフェードアウト
  	$(".backone").fadeOut(speed, function(){
  		// 背景画像番号変更
  		index = index === backurl.length - 1 ? 0 : index + 1;
