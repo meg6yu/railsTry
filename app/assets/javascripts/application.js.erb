@@ -19,7 +19,12 @@
 
 $(document).ready(function(){
    changeback(0);
+   setTimeout(hide ,3000)
 });
+
+function hide(){
+    $(".alert").hide("fast");
+}
 
  function changeback(index){
  	var speed = 1000;
