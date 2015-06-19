@@ -1,5 +1,10 @@
 module SessionsHelper
 
+  def favs_count(micropost)
+     myfav=Favorite.where(favoller_id: current_user.id)
+     fav=myfav.where(faved_id: micropost.id).count    
+  end
+
   def sign_in(user)
     remember_token = User.new_remember_token
     cookies.permanent[:remember_token] = remember_token

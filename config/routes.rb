@@ -6,13 +6,11 @@ Rails.application.routes.draw do
       get :following, :followers, :favorites
     end
   end
- resources :sessions,      only: [:new, :create, :destroy]
+  resources :sessions,      only: [:new, :create, :destroy]
   resources :microposts,    only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
 
-#
-   resources :favorites, only: [:create, :destroy]
-#
+  resources :favorites, only: [:create, :destroy]
 
   root  'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'

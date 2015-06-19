@@ -12,10 +12,9 @@
       data: { confirm: "You sure?" },
       title: feed_item.content %>
       <% else %>
-      <%= link_to "★" ,favorites_path(faved_id: feed_item.id) ,method: :post %>
+      <%= link_to "★" ,favorites_path(faved_id: feed_item.id) ,method: :post, id: "fav" %>
       [<%= Favorite.where(faved_id:feed_item).count %>]
     </span>
     <% end %>
   </div>
-  <div class="clearfix"></div>
 </li>

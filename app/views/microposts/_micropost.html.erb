@@ -1,6 +1,14 @@
 <li>
   <%= gravatar_for micropost.user, size: 52 %>
-  <span class="content"><%= micropost.content %></span>
+  <span class="content"><%= micropost.content %>
+  </span>
+  <span>  
+    <% if favs_count(micropost)==1 %>
+    <%= favs_count(micropost) %> favo!
+    <% else %>
+    <%= favs_count(micropost) %> favs!
+    <% end %>
+  </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
   </span>
